@@ -1,0 +1,25 @@
+<div class="bar bar-header">
+      <h1 class="title">Popover</h1>
+      <div class="buttons">
+        <button class="button button-icon ion-more" ng-click="popover.show($event)">
+        </button>
+      </div>
+    </div>
+    <div class="bar bar-subheader">
+      <div class=" button-bar">
+        <button class="button button-light button-android" ng-class="{ 'button\-positive': demo == 'ios' }" ng-click="setPlatform('ios')">
+          iOS
+        </button>
+        <button class="button button-light button-android" ng-class="{ 'button\-positive': demo == 'android' }" ng-click="setPlatform('android')">
+          Android
+        </button>
+        <button class="button button-light button-android" ng-class="{ 'button\-positive': demo == 'ionic' }" ng-click="setPlatform('ionic')">
+          Ionic
+        </button>
+        <a ui-sref="main" class="button button-assertive">Back</a>
+      </div>
+    </div>
+    
+    <ion-content class="padding has-subheader">
+      Click the more info icon in the top right. In an actual app the platform style will automatically be set.
+    </ion-content>
