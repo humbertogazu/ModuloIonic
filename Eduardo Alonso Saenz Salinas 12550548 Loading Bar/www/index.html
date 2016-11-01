@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+ 
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="cordova.js"></script>
+
+    
+    <script src="js/app.js"></script>
+    <script src="js/loadingController.js"></script>
+
+  </head>
+  <body ng-controller="loadingController">
+    <div class="bar bar-positive">
+        <h1 class="title">Hello!</h1>
+    </div>
+    <div class="has-header">
+      <div class="bar bar-loading bar-assertive has-header" ng-if="data.isLoading">
+      Loading...
+    
+
+    </div>
+    <br>
+
+    <div ng-class="{'has-loading': data.isLoading}">
+     <br>
+      <br>
+       <br>
+    Toggle me to toggle loading!
+      
+      <label class="toggle" style="text-align:right" text-align="right" >
+         <input ng-model="data.isLoading" type="checkbox">
+         <div class="track">
+           <div class="handle"></div>
+         </div>
+      </label>
+    </div>
+    </div>
+  </body>
+</html>

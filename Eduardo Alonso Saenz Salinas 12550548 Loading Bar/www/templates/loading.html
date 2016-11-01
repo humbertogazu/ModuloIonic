@@ -1,0 +1,12 @@
+<ion-view>
+	<div>
+      
+      <div class="bar bar-loading bar-assertive" ng-if="data.isLoading">
+      Loading...
+    </div>
+    <ion-content ng-class="{'has-loading': data.isLoading}">
+      <ion-toggle ng-model="data.isLoading">Toggle me to toggle loading!</ion-toggle>
+    </ion-content>
+
+    </div>
+</ion-view>
